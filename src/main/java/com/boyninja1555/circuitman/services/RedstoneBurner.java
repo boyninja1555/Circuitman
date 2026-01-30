@@ -7,9 +7,6 @@ import org.bukkit.block.Block;
 import org.jetbrains.annotations.NotNull;
 
 public class RedstoneBurner extends CircuitService {
-    public static final long BURN_TIME = 5L;
-    public static final int FLAME_COUNT = 5;
-    public static final float TNT_EXPLODE_POWER = 25f;
 
     public RedstoneBurner(Circuitman plugin) {
         super(plugin);
@@ -24,7 +21,11 @@ public class RedstoneBurner extends CircuitService {
         World world = block.getWorld();
         Location loc = block.getLocation();
         block.setType(Material.AIR);
-        world.createExplosion(loc, TNT_EXPLODE_POWER, true);
+        world.createExplosion(loc, plugin.config.redstoneTntExplodePower, plugin.config.redstoneTntExplodeFire);
+    }
+
+    public void forBlock(Block block) {
+        forBlock(plugin.config.redstoneBurnDepth, block);
     }
 
     public void forBlock(int depth, Block block) {
@@ -38,7 +39,7 @@ public class RedstoneBurner extends CircuitService {
         Block right = world.getBlockAt(loc.clone().add(1, 0, 0));
         Block left = world.getBlockAt(loc.clone().add(-1, 0, 0));
         block.setType(Material.AIR);
-        world.spawnParticle(Particle.FLAME, block.getLocation(), FLAME_COUNT);
+        world.spawnParticle(Particle.FLAME, block.getLocation(), plugin.config.redstoneFlameCount);
         world.playSound(block.getLocation(), Sound.ENTITY_CREEPER_PRIMED, 1f, 1f);
 
         if (plugin.isFolia)
@@ -47,14 +48,14 @@ public class RedstoneBurner extends CircuitService {
                 check(back, depth);
                 check(right, depth);
                 check(left, depth);
-            }, BURN_TIME);
+            }, plugin.config.redstoneBurnTime);
         else
             plugin.getServer().getScheduler().runTaskLater(plugin, () -> {
                 check(forward, depth);
                 check(back, depth);
                 check(right, depth);
                 check(left, depth);
-            }, BURN_TIME);
+            }, plugin.config.redstoneBurnTime);
     }
 
     private void check(Block target, int depth) {

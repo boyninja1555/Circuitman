@@ -1,0 +1,27 @@
+###########################
+# Circuitman Config       #
+# Written by boyninja1555 #
+###########################
+
+######################
+# Flammable redstone #
+######################
+
+# Burn time per wire
+# There are 20 ticks in a second
+redstone-burn-time: 5  # 0.25 seconds
+
+# Amount of flames per burning wire
+redstone-flame-count: 5
+
+# This is used when burning redstone hits a TNT block
+# It is like the `/summon tnt` command's `power` argument
+redstone-tnt-explode-power: 25
+
+# Whether fire should appear when burning redstone hits a TNT block
+redstone-tnt-explode-fire: true
+
+# WARNING: ADVANCED & DANGEROUS
+# This field prevents lag by capping the amount of times a flame can burn wires
+# Do not change this unless you're sure the server is beefy enough!
+redstone-burn-depth: 25

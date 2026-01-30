@@ -21,7 +21,7 @@ public class FireLightL extends CListener {
         if (!block.getType().equals(Material.FIRE))
             return;
 
-        plugin.services.gunpowderBurner.forBlock(25, block);
+        plugin.services.gunpowderBurner.forBlock(block);
     }
 
     @EventHandler
@@ -31,6 +31,6 @@ public class FireLightL extends CListener {
         if (!block.getType().equals(Material.FIRE))
             return;
 
-        plugin.services.gunpowderBurner.forBlock(25, block);
+        plugin.services.gunpowderBurner.forBlock(block);
     }
 }
