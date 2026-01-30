@@ -1,9 +1,8 @@
-<center>
+<div align="center">
     <img alt="Logo" width="175" src="logo/border.png" />
     <h1>Circuitman</h1>
     <p>Unleash your inner computer nerd (and chaotic self)</p>
-</center>
-
+</div>
 
 ---
 
