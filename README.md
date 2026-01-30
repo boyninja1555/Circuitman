@@ -13,6 +13,6 @@ We're always adding new features just waiting to be abused! Of course, some may 
 
 **Contributing**
 
-Found a bug/glitch? Report it in the GitHub! Don't appreciate our current feature set? Submit a pull request or fork the repository! Point is, we appreciate contributors. Just be sure to follow our [MIT license](LICENSE), please!
+Found a bug/glitch? Report it in the GitHub! Don't appreciate our current feature set? Submit a pull request or fork the repository! Point is, we appreciate contributors. Just be sure to follow our [MIT license](LICENSE.md), please!
 
 After making important changes in the plugin, you are **totally** allowed to add yourself as an author in the [paper-plugin.yml](src/main/resources/paper-plugin.yml). Just—don't add your name if it's not that big of a change! We don't like credit hogs.
