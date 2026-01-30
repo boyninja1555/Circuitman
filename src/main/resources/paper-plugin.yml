@@ -1,0 +1,8 @@
+name: Circuitman
+version: "0.0.1"
+main: com.boyninja1555.circuitman.Circuitman
+api-version: "1.21"
+folia-supported: true
+
+authors:
+    - boyninja1555
