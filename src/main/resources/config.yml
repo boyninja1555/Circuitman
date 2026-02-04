@@ -3,6 +3,14 @@
 # Written by boyninja1555 #
 ###########################
 
+#################
+# Chat messages #
+#################
+admin:
+    reloaded: <yellow>[ᴄɪʀᴄᴜɪᴛᴍᴀɴ]<gold> ʀᴇʟᴏᴀᴅᴇᴅ
+    config-regenerated: <yellow>[ᴄɪʀᴄᴜɪᴛᴍᴀɴ]<gold> ᴄᴏɴꜰɪɢ.ʏᴍʟ ʀᴇɢᴇɴᴇʀᴀᴛᴇᴅ
+    config-not-regenerated: <red>[ᴄɪʀᴄᴜɪᴛᴍᴀɴ]<dark_red> ᴄᴏɴꜰɪɢ.ʏᴍʟ ɴᴏᴛ ʀᴇɢᴇɴᴇʀᴀᴛᴇᴅ! ᴄʜᴇᴄᴋ ᴛʜᴇ ᴄᴏɴꜱᴏʟᴇ ꜰᴏʀ ᴇʀʀᴏʀꜱ
+
 ######################
 # Flammable redstone #
 ######################

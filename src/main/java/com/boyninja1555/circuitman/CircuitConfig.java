@@ -1,13 +1,20 @@
 package com.boyninja1555.circuitman;
 
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CircuitConfig {
+    public static final Component DEFAULT_ADMIN_MESSAGE = Component.text("Circuitman config.yml missing \"admin\" section for admin messages", NamedTextColor.RED);
     private final Circuitman plugin;
 
+    public Map<String, Component> adminMessages;
     public long redstoneBurnTime;
     public int redstoneFlameCount;
     public float redstoneTntExplodePower;
@@ -26,6 +33,19 @@ public class CircuitConfig {
 
     public void load() {
         FileConfiguration config = plugin.getConfig();
+        ConfigurationSection adminMessagesSection = config.getConfigurationSection("admin");
+
+        if (adminMessages == null)
+            adminMessages = new HashMap<>();
+
+        if (adminMessagesSection == null)
+            plugin.getLogger().warning("Config.yml missing \"admin\" section for admin messages! An error message will be shown to admins instead.");
+        else
+            for (String key : adminMessagesSection.getKeys(false)) {
+                Component value = adminMessagesSection.getRichMessage(key, DEFAULT_ADMIN_MESSAGE);
+                adminMessages.put(key, value);
+            }
+
         redstoneBurnTime = config.getLong("redstone-burn-time");
         redstoneFlameCount = config.getInt("redstone-flame-count");
         redstoneTntExplodePower = (float) config.getDouble("redstone-tnt-explode-power");
