@@ -7,9 +7,9 @@
 ---
 
 <div align="center">
-    <a href="https://dsc.gg/circuitman">Discord</a>
+    <a href="https://dsc.gg/circuitman" target="_blank">Discord</a>
     |
-    <a href="https://modrinth.com/plugin/circuitman">Modrinth</a>
+    <a href="https://modrinth.com/plugin/circuitman" target="_blank">Modrinth</a>
 </div>
 
 ---
