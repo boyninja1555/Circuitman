@@ -6,6 +6,14 @@
 
 ---
 
+<div align="center">
+    <a href="https://dsc.gg/circuitman">Discord</a>
+    |
+    <a href="https://modrinth.com/plugin/circuitman">Modrinth</a>
+</div>
+
+---
+
 If you found this, you may be desperate for **better redstone**. Don't get me wrong, vanilla redstone is definitely capable. But what if it was extended to be more realistic and chaotic? That—is the question **Circuitman** solves.
 
 **Features**
