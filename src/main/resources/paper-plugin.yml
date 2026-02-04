@@ -1,5 +1,5 @@
 name: Circuitman
-version: "0.0.2"
+version: "0.0.3"
 description: "Unleash your inner computer nerd (and chaotic self)"
 main: com.boyninja1555.circuitman.Circuitman
 api-version: "1.21"
