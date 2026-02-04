@@ -25,3 +25,22 @@ redstone-tnt-explode-fire: true
 # This field prevents lag by capping the amount of times a flame can burn wires
 # Do not change this unless you're sure the server is beefy enough!
 redstone-burn-depth: 25
+
+########################################
+# Circuitman Experimental Config       #
+# Written by boyninja1555              #
+#                                      #
+# WARNING: ADVANCED AND DANGEROUS      #
+# When set to true, it forces the      #
+# values below, which are SUPER        #
+# experimental and not officially      #
+# supported! They may crash the server #
+# for zero reason AT ALL:              #
+#                                      #
+# redstone-burn-time: 2  # 0.1 seconds #
+# redstone-flame-count: 10             #
+# redstone-tnt-explode-power: 45       #
+# redstone-tnt-explode-fire: true      #
+# redstone-burn-depth: 100             #
+########################################
+experimental-mode: false

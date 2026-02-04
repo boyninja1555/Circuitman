@@ -20,6 +20,7 @@ If you found this, you may be desperate for **better redstone**. Don't get me wr
 
 We're always adding new features just waiting to be abused! Of course, some may be missing. If you believe there's more, I would recommend inspecting the code itself.
 - **Flammable redstone** — Ever tried lighting redstone dust? Don't do it now! When you use flint-and-steel next to redstone wire, it causes a chain reaction of burning wire. If it touches TNT—you're toast. And not just the vanilla TNT behavior, it's a **GIANT** fire crater!
+- **Experimental mode** — Enjoy absolute chaos, but have almost no idea what our config means? A single option can enable our pre-selected "chaos values"!
 - **More to come** — If this doesn't seem like a lot—you're right. We have ideas, but we're not **that** fast!
 
 **Contributing**

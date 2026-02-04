@@ -13,6 +13,7 @@ public class CircuitConfig {
     public float redstoneTntExplodePower;
     public boolean redstoneTntExplodeFire;
     public int redstoneBurnDepth;
+    public boolean experimentalMode;
 
     public CircuitConfig(Circuitman plugin) {
         this.plugin = plugin;
@@ -30,6 +31,19 @@ public class CircuitConfig {
         redstoneTntExplodePower = (float) config.getDouble("redstone-tnt-explode-power");
         redstoneTntExplodeFire = config.getBoolean("redstone-tnt-explode-fire");
         redstoneBurnDepth = config.getInt("redstone-burn-depth");
+        experimentalMode = config.getBoolean("experimental-mode");
+        loadExperimental();
+    }
+
+    public void loadExperimental() {
+        if (!experimentalMode)
+            return;
+
+        redstoneBurnTime = 2L;
+        redstoneFlameCount = 10;
+        redstoneTntExplodePower = 45;
+        redstoneTntExplodeFire = true;
+        redstoneBurnDepth = 100;
     }
 
     public void save() {
@@ -40,6 +54,7 @@ public class CircuitConfig {
             config.set("redstone-tnt-explode-power", redstoneTntExplodePower);
             config.set("redstone-tnt-explode-fire", redstoneTntExplodeFire);
             config.set("redstone-burn-depth", redstoneBurnDepth);
+            config.set("experimental-mode", experimentalMode);
             config.save(new File(plugin.getDataFolder(), "config.yml"));
         } catch (IOException ex) {
             plugin.getLogger().severe("Could not save config! " + ex.getMessage());
