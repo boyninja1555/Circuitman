@@ -35,16 +35,13 @@ public class CircuitConfig {
         FileConfiguration config = plugin.getConfig();
         ConfigurationSection adminMessagesSection = config.getConfigurationSection("admin");
 
-        if (adminMessages == null)
-            adminMessages = new HashMap<>();
-
+        if (adminMessages == null) adminMessages = new HashMap<>();
         if (adminMessagesSection == null)
             plugin.getLogger().warning("Config.yml missing \"admin\" section for admin messages! An error message will be shown to admins instead.");
-        else
-            for (String key : adminMessagesSection.getKeys(false)) {
-                Component value = adminMessagesSection.getRichMessage(key, DEFAULT_ADMIN_MESSAGE);
-                adminMessages.put(key, value);
-            }
+        else for (String key : adminMessagesSection.getKeys(false)) {
+            Component value = adminMessagesSection.getRichMessage(key, DEFAULT_ADMIN_MESSAGE);
+            adminMessages.put(key, value);
+        }
 
         redstoneBurnTime = config.getLong("redstone-burn-time");
         redstoneFlameCount = config.getInt("redstone-flame-count");
@@ -56,8 +53,7 @@ public class CircuitConfig {
     }
 
     public void loadExperimental() {
-        if (!experimentalMode)
-            return;
+        if (!experimentalMode) return;
 
         redstoneBurnTime = 2L;
         redstoneFlameCount = 10;
