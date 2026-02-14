@@ -38,7 +38,10 @@ public class RedstoneBurner extends CircuitService {
         Block back = world.getBlockAt(loc.clone().add(0, 0, -1));
         Block right = world.getBlockAt(loc.clone().add(1, 0, 0));
         Block left = world.getBlockAt(loc.clone().add(-1, 0, 0));
-        block.setType(Material.AIR);
+
+        if (block.getType().equals(Material.REDSTONE_WIRE))
+            block.setType(Material.AIR);
+
         world.spawnParticle(Particle.FLAME, block.getLocation(), plugin.config.redstoneFlameCount);
         world.playSound(block.getLocation(), Sound.ENTITY_CREEPER_PRIMED, 1f, 1f);
 
